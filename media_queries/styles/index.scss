@@ -1,0 +1,38 @@
+html {
+  font-size: 32px;
+
+  body {
+    margin: 0;
+    padding: 0;
+
+    .pixel,
+    .em,
+    .rem {
+      min-height: 100px;
+    }
+
+    .pixel {
+      background: red;
+
+      @media (min-width: 400px) {
+        opacity: 0.5;
+      }
+    }
+
+    .em {
+      background: green;
+
+      @media (min-width: 25em) {
+        opacity: 0.5;
+      }
+    }
+
+    .rem {
+      background: blue;
+
+      @media (min-width: 25rem) {
+        opacity: 0.5;
+      }
+    }
+  }
+}

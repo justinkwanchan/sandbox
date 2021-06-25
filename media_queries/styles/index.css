@@ -1,0 +1,45 @@
+html {
+  font-size: 32px;
+}
+
+html body {
+  margin: 0;
+  padding: 0;
+}
+
+html body .pixel,
+html body .em,
+html body .rem {
+  min-height: 100px;
+}
+
+html body .pixel {
+  background: red;
+}
+
+@media (min-width: 400px) {
+  html body .pixel {
+    opacity: 0.5;
+  }
+}
+
+html body .em {
+  background: green;
+}
+
+@media (min-width: 25em) {
+  html body .em {
+    opacity: 0.5;
+  }
+}
+
+html body .rem {
+  background: blue;
+}
+
+@media (min-width: 25rem) {
+  html body .rem {
+    opacity: 0.5;
+  }
+}
+/*# sourceMappingURL=index.css.map */

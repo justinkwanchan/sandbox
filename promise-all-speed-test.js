@@ -1,9 +1,6 @@
 const fetch = require('node-fetch');
 
-const numArray = [];
-for (let i = 1; i < 31; i++) {
-  numArray.push(i);
-}
+const numArray = [...Array(31).keys()];
 
 const loadDataWithPromiseAll = async () => {
   const start = new Date();

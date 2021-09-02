@@ -1,23 +1,23 @@
 // Area = (pi * r^2) / 4
 
-const numArr = [];
-const dataSize = 10000;
+const size = process.argv[2];
 
-for (let i = 0; i < dataSize; i++) {
-  numArr.push(Math.random());
-}
+const approximatePi = dataSize => {
+  let circleCount = 0;
+  let squareCount = 0;
 
-let circleCount = 0;
-let sampleSize = 0;
+  for (let i = 0; i < dataSize; i++) {
+    const x = Math.random();
+    const y = Math.random();
 
-for (let i = 0; i < dataSize; i++) {
-  for (let j = i + 1; j < dataSize; j++) {
-    if (numArr[i] ** 2 + numArr[j] ** 2 < 1) {
+    if (x ** 2 + y ** 2 < 1) {
       circleCount++;
     }
 
-    sampleSize++;
+    squareCount++;
   }
-}
 
-console.log((circleCount / sampleSize) * 4);
+  return (circleCount / squareCount) * 4;
+};
+
+console.log(approximatePi(size));
